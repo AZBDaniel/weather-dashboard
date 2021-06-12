@@ -1,0 +1,11 @@
+header {
+background-image: linear-gradient(to right, royalblue , midnightblue);
+ color: white;
+ text-align: center;
+ padding: 4px;
+ font-family: sans-serif;
+}
+
+body div {
+display: flex;
+}
