@@ -24,31 +24,78 @@
 
         <!--main column to the left-->
         <div class="flexColumn" style="flex-grow: 2;">
-
-            <h2 class="searchCity">Search for City</h2>
+            <form class="flexColumn">
+                <h2 class="searchCity">Search for City</h2>
+                <input class="cityInputName" id="cityInputName">
+                <button class="button" id="button">Search</button>
+                <!--Search City History -->
+                <div class="searchHistory"></div>
+            </form>
 
         </div>
 
         <!--main column to the right-->
         <div class="flexColumn" style="flex-grow: 8;">
 
-            <section></section>
-            <div class="liveWeather">
-                <h2>CityName</h2>
+            <div class="liveWeather flexColumn">
+                <div>
+                    <h2 id="weatherToday"></h2>
+                    <img id="iconToday">
+                </div>
+                <p id="tempToday"></p>
+                <p id="windToday"></p>
+                <P id="humidityToday"></P>
+                <p id="uvToday"></p>
             </div>
             <h3>5-Day Forecast:</h3>
             <section class=" flex spaceBetween">
-                <div class="d1">Day 1</div>
-                <div class="d2">Day 2</div>
-                <div class="d3">Day 3</div>
-                <div class="d4">Day 4</div>
-                <div class="d5">Day 5</div>
+
+                <div class="flexColumn">
+                    <h3 id="weatherD1"></h3>
+                    <img id="iconD1">
+                    <p id="tempD1"></p>
+                    <p id="windD1"></p>
+                    <p id="humidityD1"></p>
+                </div>
+
+                <div class="flexColumn">
+                    <h3 id="weatherD2"></h3>
+                    <img id="iconD2">
+                    <p id="tempD2"></p>
+                    <p id="windD2"></p>
+                    <p id="humidityD2"></p>
+                </div>
+
+                <div class="flexColumn">
+                    <h3 id="weatherD3"></h3>
+                    <img id="iconD3">
+                    <p id="tempD3"></p>
+                    <p id="windD3"></p>
+                    <p id="humidityD3"></p>
+                </div>
+
+                <div class="flexColumn">
+                    <h3 id="weatherD4"></h3>
+                    <img id="iconD4">
+                    <p id="tempD4"></p>
+                    <p id="windD4"></p>
+                    <p id="humidityD4"></p>
+                </div>
+
+                <div class="flexColumn">
+                    <h3 id="weatherD5"></h3>
+                    <img id="iconD5">
+                    <p id="tempD5"></p>
+                    <p id="windD5"></p>
+                    <p id="humidityD5"></p>
+                </div>
             </section>
 
         </div>
 
     </div>
-
+    <script src="./assets/javascript/script.js"></script>
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
 </body>
 
 </html>
