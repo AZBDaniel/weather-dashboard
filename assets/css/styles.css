@@ -30,4 +30,15 @@ margin: 15px;
 
 .liveWeather {
 border-style: solid;
+border-color: grey;
+}
+
+.button {
+    margin: 5px 0px;
+}
+
+.searchHistory {
+    border-top: 3px;
+    border-style: solid;
+    border-color: grey;
 }
