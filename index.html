@@ -29,7 +29,7 @@
                 <input class="cityInputName" id="cityInputName">
                 <button class="button" id="button">Search</button>
                 <!--Search City History -->
-                <div class="searchHistory"></div>
+                <div class="searchHistory flexColumn" id="searchHistory"></div>
             </form>
 
         </div>
@@ -38,7 +38,7 @@
         <div class="flexColumn" style="flex-grow: 8;">
 
             <div class="liveWeather flexColumn">
-                <div>
+                <div class ='todayinfo'>
                     <h2 id="weatherToday"></h2>
                     <img id="iconToday">
                 </div>
@@ -48,9 +48,9 @@
                 <p id="uvToday"></p>
             </div>
             <h3>5-Day Forecast:</h3>
-            <section class=" flex spaceBetween">
+            <section class=" flex spaceBetween fiveDayForecast">
 
-                <div class="flexColumn">
+                <div class="flexColumn Forecast">
                     <h3 id="weatherD1"></h3>
                     <img id="iconD1">
                     <p id="tempD1"></p>
@@ -58,7 +58,7 @@
                     <p id="humidityD1"></p>
                 </div>
 
-                <div class="flexColumn">
+                <div class="flexColumn Forecast">
                     <h3 id="weatherD2"></h3>
                     <img id="iconD2">
                     <p id="tempD2"></p>
@@ -66,7 +66,7 @@
                     <p id="humidityD2"></p>
                 </div>
 
-                <div class="flexColumn">
+                <div class="flexColumn Forecast">
                     <h3 id="weatherD3"></h3>
                     <img id="iconD3">
                     <p id="tempD3"></p>
@@ -74,7 +74,7 @@
                     <p id="humidityD3"></p>
                 </div>
 
-                <div class="flexColumn">
+                <div class="flexColumn Forecast">
                     <h3 id="weatherD4"></h3>
                     <img id="iconD4">
                     <p id="tempD4"></p>
@@ -82,7 +82,7 @@
                     <p id="humidityD4"></p>
                 </div>
 
-                <div class="flexColumn">
+                <div class="flexColumn Forecast">
                     <h3 id="weatherD5"></h3>
                     <img id="iconD5">
                     <p id="tempD5"></p>
@@ -94,6 +94,7 @@
         </div>
 
     </div>
+    <!--<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>-->
     <script src="./assets/javascript/script.js"></script>
     <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
 </body>

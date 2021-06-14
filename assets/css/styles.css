@@ -42,3 +42,17 @@ border-color: grey;
     border-style: solid;
     border-color: grey;
 }
+
+.Forecast {
+    background-color: lightslategray;
+    color: white;
+    border-style: solid;
+    border: 5px;
+    padding:5px 25px;
+}
+
+.todayInfo {
+    align-items: baseline;
+    margin:0px;
+    padding: 0px;
+}

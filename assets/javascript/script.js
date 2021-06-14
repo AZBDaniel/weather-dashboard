@@ -6,6 +6,19 @@ var button = document.getElementById('button');
 
 button.addEventListener('click', function(event) {
     event.preventDefault();
+
+    var searchHistory = JSON.parse(localStorage.getItem('searchHistory')) ?? [];
+    searchHistory.push(city.value);
+    localStorage.setItem('searchHistory', JSON.stringify(searchHistory));
+
+    var list = document.getElementById('searchHistory');
+    list.innerHTML = '';
+    for (var i = 0; i < searchHistory.length; i++) {
+        var p = document.createElement('p');
+        p.appendChild(document.createTextNode(searchHistory[i]));
+        list.appendChild(p);
+    }
+
     fetchForecastByCity(city.value)
         .then(data => {
             console.log(data);
