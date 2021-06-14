@@ -17,20 +17,6 @@ button.addEventListener('click', function(event) {
             document.getElementById('uvToday').textContent = `UV Index: ${data.daily[0].uvi}`
         });
 
-    // fetchForecastByCity(city.value)
-    //     .then(response => response.json())
-    //     .then(data => {
-    //         console.log(data);
-    //         var forecast = data.list.reduce(function(acc, day) {
-    //             var date = new Date(day.dt_txt);
-    //             var existing = acc.find(element => element.dateMy == date.getDate());
-    //             if (!existing) {
-    //                 acc.push({ dateMy: date.getDate(), ...day})
-    //             }
-    //             return acc;
-    //         }, []);
-    //     });
-        
 });
 
 function fetchForecastByCity(cityName) {
@@ -42,19 +28,4 @@ function fetchForecastByCity(cityName) {
 function fetchForecastByCoord(lat, lon) {
     return fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly,alerts&units=imperial&appid=${apiKey}`)
         .then(response => response.json());
-}
-
-// function fetchWeatherByCity(cityName) {
-//     var url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=imperial&appid=${apiKey}`;
-//     return fetch(url);
-// }
-
-// function fetchForecastByCity(cityName) {
-//     var url = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${apiKey}`;
-//     return fetch(url);
-// }
-
-function fetchUvIndex() {
-    var url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly,daily,alerts&appid=${apiKey}`;
-    return fetch(url);
 }
